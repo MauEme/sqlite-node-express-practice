@@ -8,6 +8,12 @@ router.get('/books', async(req, res)=> {
     res.json(books);
 })
 
+router.get('/books/:id', async(req, res)=> {
+    const {id}= req.params;
+    const book= await Book.findByPk(id);
+    res.json(book);
+});
+
 router.post('/books', (req, res)=>{
     res.send(`Creando libro`);
 });

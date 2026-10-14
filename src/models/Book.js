@@ -30,5 +30,7 @@ export const Book= sequelize.define('book', {
     available: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
-    },
+    }, 
+        timestamps: false
+    
 });
