@@ -11,9 +11,9 @@ const app= express();
 
 
 try {
+    app.use(express.json()); // 1. Middleware para interpretar JSON en req.body (¡Indispensable!)
     app.listen(PORT);
     app.use(bookRoutes);
-    app.use(express.json()); // 1. Middleware para interpretar JSON en req.body (¡Indispensable!)
     
     await sequelize.sync();
 

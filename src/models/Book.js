@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../db.js";
 
-export const Book= sequelize.define('book', {
+export const Book = sequelize.define('book', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -30,7 +30,7 @@ export const Book= sequelize.define('book', {
     available: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
-    }, 
-        timestamps: false
-    
+    }
+}, {
+    timestamps: false 
 });
